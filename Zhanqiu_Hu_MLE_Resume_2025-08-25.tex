@@ -1,0 +1,381 @@
+\documentclass[letterpaper,10pt]{article}
+
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{fancyhdr}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{amsmath}
+\usepackage{fontawesome}
+
+% Page setup for compact layout
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Compact margins
+% \addtolength{\oddsidemargin}{-0.8in}
+% \addtolength{\evensidemargin}{-0.8in}
+% \addtolength{\textwidth}{1.6in}
+% \addtolength{\topmargin}{-0.8in}
+% \addtolength{\textheight}{1.7in}
+
+% Increased margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.6in}
+\addtolength{\textwidth}{1.2in}
+\addtolength{\topmargin}{-0.6in}
+\addtolength{\textheight}{1.5in}
+
+% Compact spacing
+% \linespread{0.9}
+\linespread{1.1}
+\setlength{\parskip}{0pt}
+\setlength{\parsep}{0pt}
+\setlength{\headsep}{0pt}
+\setlength{\footskip}{0pt}
+
+% Compact section formatting
+\titleformat{\section}{
+  \vspace{-18pt}\raggedright\Large
+}{}{0em}{\textsc}[\color{black}\titlerule \vspace{-6pt}]
+
+% Compact commands
+\newcommand{\resumeItem}[1]{
+  \item\normalsize{#1 \vspace{-2pt}}
+}
+
+
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-3pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \normalsize#3 & \normalsize #4 \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \vspace{-3pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumeProjectWithSubtitle}[3]{
+    \vspace{-3pt}\item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #3 \\
+      \textit{#2} & \\
+    \end{tabular*}\vspace{-4pt}
+}
+
+\newcommand{\resumePublicationHeading}[4]{
+  \vspace{-3pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \normalsize#3 \\
+      \normalsize#4 \\
+    \end{tabular*}\vspace{0pt}
+}
+
+\newcommand{\resumePublicationHeadingCompact}[3]{
+  \vspace{-3pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \normalsize#3 \\
+    \end{tabular*}\vspace{0pt}
+}
+
+% Compact list environments
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.1in, label={}, itemsep=0.5em]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}[leftmargin=0.15in, label=$\bullet$, topsep=2pt, itemsep=0.2em, parsep=0pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{0pt}}
+
+\newcommand{\resumeSubheadingWithGPA}[5]{
+  \vspace{-3pt}\item
+    \begin{tabular*}{0.97\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & #2 \\
+      \normalsize#3 & \normalsize #4 \\
+    \end{tabular*}\vspace{-7pt}
+    \begin{itemize}[leftmargin=0.15in, label=$\bullet$, topsep=2pt, itemsep=0.2em, parsep=0pt]
+      \item\normalsize{#5}
+    \end{itemize}\vspace{-4pt}
+}
+
+% Experience section macros
+\newcommand{\experienceJobTitle}[4]{
+    \textbf{#1} \hfill #3 \\
+    #2 \hfill #4 \\
+    \vspace{2pt}
+}
+
+\newcommand{\experienceJobTitleDirectBullets}[4]{
+    \textbf{#1} \hfill #3 \\
+    #2 \hfill #4 \\
+    \vspace{-2pt}
+}
+
+\newcommand{\experienceProjectSubtitle}[1]{
+    \hspace{0.15in}\textbf{\textbf{#1}}
+    % \vspace{-2pt}
+}
+
+\newcommand{\experienceBulletListStart}{\begin{itemize}[leftmargin=0.3in, label=$\bullet$, topsep=2pt, itemsep=0.2em, parsep=0pt]}
+% \newcommand{\experienceBulletListEnd}{\end{itemize}}
+\newcommand{\experienceBulletListEnd}{\end{itemize}\vspace{4pt}}
+
+% Publication section macros
+\newcommand{\publicationCompact}[3]{
+    \textbf{#1} \hfill #3 \\
+    #2
+    \vspace{4pt}
+}
+
+% Project section macros
+% \newcommand{\projectTitle}[2]{
+%     \textbf{#1} \hfill #2
+%     \vspace{-2pt}
+% }
+
+% New project title command with role support
+\newcommand{\projectTitle}[2]{
+    \textbf{#1} \hfill #2
+    \vspace{-2pt}
+}
+
+\newcommand{\projectTitleWithRole}[3]{
+    \textbf{#1} \hspace{0.5em} \normalsize{#2} \hfill #3
+    \vspace{-2pt}
+}
+
+% Education section macros
+\newcommand{\educationEntry}[4]{
+    \textbf{#1} \hfill #2 \\
+    #3 \hfill #4
+    \vspace{2pt}
+}
+
+
+
+
+\urlstyle{same}
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Change default bullet style to dots
+\renewcommand{\labelitemi}{$\bullet$}
+
+\begin{document}
+
+% Compact header
+\begin{center}
+    \textbf{\LARGE \scshape Zhanqiu(Summer) Hu} \\
+    \faPhone \, 607-216-7811 $|$ \faEnvelope \, {zh338@cornell.edu} $|$ \faMapMarker \, New York, NY $|$ \faUser \, She/Her/Hers
+\end{center}
+
+% % Education - compact
+% \section{Education}
+% \vspace{2pt}
+
+% % \educationEntry{Cornell University}{Aug 2023 - Present}{Master of Science in Computer Engineering}{Expected Dec 2025}
+% % 
+% % \textbf{Cornell University} \hfill Aug 2019 - May 2023 \\
+% % Bachelor of Science \\
+% % Double Major: Computer Science (CS) \& Electrical and Computer Engineering (ECE)\\
+% % GPA: 4.05/4.0; \textit{summa cum laude} \\
+% % \vspace{6pt}
+
+% \textbf{Cornell University, MS in Computer Engineering} \hfill Aug 2023 - Dec 2025 \\
+
+% \textbf{Cornell University, BS in Computer Science \& Electrical and Computer Engineering} \hfill Aug 2019 - May 2023 \\
+% GPA: 4.05/4.0; \textit{summa cum laude} \\
+% \vspace{6pt}
+
+% Education - compact
+\section{Education}
+\vspace{2pt}
+
+\textbf{Cornell University, MS in Computer Engineering} \hfill Aug 2023 - Dec 2025 \\
+
+\textbf{Cornell University, BS in Computer Science \& Electrical and Computer Engineering} \hfill Aug 2019 - May 2023 \\
+GPA: 4.05/4.0; \textit{summa cum laude} \\
+\vspace{6pt}
+
+% Internship - compact
+\section{Experience}
+\vspace{2pt}
+
+\textbf{Cornell Tech} \hspace{0.5em} \normalsize{Graduate Research Assistant $|$ New York, NY} \hfill Aug 2023 – Present \\
+% \experienceJobTitle{Cornell Tech}{Graduate Research Assistant}{Aug 2023 – Present}{New York, NY}
+\vspace{2pt}
+
+% \experienceProjectSubtitle{Test-Time Optimization for Diffusion-based Language Models}
+% \experienceBulletListStart
+%   \item\normalsize{Achieved up to 34$\times$ inference speedup for diffusion-based language models by developing training-free \textit{FreeCache} (KV cache optimization) and \textit{Guided Diffusion} (token unmasking schedule), integrated with \textbf{vLLM} and \textbf{HuggingFace}.}
+%   \item\normalsize{Designed and benchmarked \textbf{model serving optimizations}, from algorithm and system innovation to performance evaluation.}
+%   \item\normalsize{First author on \textit{Accelerating Diffusion Language Model Inference via Efficient KV Caching and Guided Diffusion} (arXiv:2505.21467) showcasing contributions to scalable diffusion LLM inference.}
+% \experienceBulletListEnd
+
+\experienceProjectSubtitle{Test-Time Optimization for Diffusion LLMs}
+\experienceBulletListStart
+  \item\normalsize{Achieved up to \textbf{34$\times$} inference speedup by developing \textit{FreeCache} (KV cache optimization) and \textit{Guided Diffusion} (cross-model token unmasking), integrated with \textbf{vLLM} and \textbf{HuggingFace}.}
+  \item\normalsize{Designed and benchmarked \textbf{test-time optimizations} across reasoning and QA benchmarks (e.g., MMLU, GSM8K, PIQA), enabling scalable long-context ($>$1024 tokens) generation.}
+  \item\normalsize{First author on \textit{Accelerating Diffusion Language Model Inference via Efficient KV Caching and Guided Diffusion} (arXiv:2505.21467), demonstrating leadership and collaboration in \textbf{efficient LLM inference} research.}
+\experienceBulletListEnd
+
+
+% \experienceProjectSubtitle{Distributed Framework for Recommendation Retrieval and Ranking}
+% \experienceBulletListStart
+%   \item\normalsize{Built a distributed framework for low-latency retrieval and ranking using \textbf{gRPC}, \textbf{Ray Serve}, and \textbf{NVIDIA Triton}.}
+%   \item\normalsize{Reduced latency by 40\% and doubled throughput via co-optimization across embedding lookup, search (\textbf{FAISS}), and ranking.}
+%   \item\normalsize{Profiled system to expose non-DNN bottlenecks (up to 42\% latency), driving system-level design optimizations.}
+% \experienceBulletListEnd
+
+\vspace{2pt}
+\experienceProjectSubtitle{Distributed Framework for Recommendation Retrieval and Ranking}
+\experienceBulletListStart
+\item\normalsize{Designed and deployed a production-style framework supporting training and serving of \textbf{recommendation models} (two-tower, transformer, and DLRM) using \textbf{TensorFlow},
+with serving enabled through a microservices architecture built on \textbf{gRPC}, \textbf{Ray Serve}, and \textbf{NVIDIA Triton Server}.}
+\item\normalsize{Implemented a scalable \textbf{data pipeline} with feature engineering in \textbf{NVTabular}, fast data access through \textbf{Redis}, and integrated vector search indexes with \textbf{FAISS}.}
+  \item\normalsize{Instrumented the design space exploration framework with profiling using \textbf{NVIDIA Nsight Systems} and \textbf{Intel VTune}, driving \textbf{system-level optimizations} that reduced latency by 40\% and doubled throughput.}
+\experienceBulletListEnd
+
+% \vspace{2pt}
+% % \experienceJobTitleDirectBullets{Amazon Web Services (AWS)}{Software Development Engineer Intern}{May 2022 -- Aug 2022}{Boston, MA}
+% \textbf{Amazon Web Services (AWS)} \hspace{0.5em} \normalsize{Software Engineer Intern $|$ Boston, MA} \hfill May 2022 -- Aug 2022 \\
+
+% \experienceBulletListStart
+% \item\normalsize{Led a large-scale \textbf{JavaScript/React} upgrade in the FSx team's codebase, enabling safe migrations.}
+% \item\normalsize{Integrated automated testing into CI/CD pipelines and collaborated with backend engineers to validate API compatibility.}
+% \item\normalsize{Built internal tooling and migration guidelines adopted by 5+ teams, reducing manual effort and accelerating upgrades.}
+% \experienceBulletListEnd
+
+
+\vspace{2pt}
+\textbf{Amazon Web Services (AWS)} \hspace{0.5em} \normalsize{Software Development Engineer Intern $|$ Boston, MA} \hfill May 2022 -- Aug 2022 \\
+
+\experienceBulletListStart
+  \item\normalsize{Revamped AWS FSx frontend codebase with latest \textbf{TypeScript}/\textbf{React}; Upgraded \textbf{UI} libraries to align with AWS design standards; 
+  Implemented scalable state management and async workflows with \textbf{Redux Toolkit} and \textbf{Redux Observable}.}
+  \item\normalsize{Improved \textbf{user experience} and code quality by leveraging strong typing, reducing bugs, and eliminating duplication.}
+  \item\normalsize{Integrated \textbf{automated testing into CI/CD pipelines} and delivered migration tools adopted by 5+ teams.}
+\experienceBulletListEnd
+
+
+% Skills - compact
+\section{Skills}
+
+\textbf{ML Frameworks:} PyTorch, TensorFlow, HuggingFace, vLLM, llama.cpp, verl (RLHF) \\
+\vspace{2pt}
+
+\textbf{Systems \& Infra:} AWS, NVIDIA Triton, Ray Serve, FAISS, gRPC, TVM, Redis, Docker, Kubernetes, Linux, Slurm \\
+\vspace{2pt}
+
+\textbf{Programming:} Python, C/C++, Java, JavaScript, OCaml, SystemVerilog, Bash, Shell, \LaTeX \\
+\vspace{2pt}
+
+\textbf{Expertise:} AI/ML, ML Systems and Infra, Distributed Systems, Computer Architecture, Compilers, Operating Systems
+
+\vspace{4pt}
+
+% Technical Projects - compact
+\section{Projects}
+\vspace{2pt}
+
+\projectTitleWithRole{2D Convolution Kernel Optimization}{Individual Contributor}{Fall 2023}
+\experienceBulletListStart
+% \item\normalsize{Implemented optimized 2D convolution kernels on FPGA (Verilog), CPU (C++/OpenMP), and GPU (CUDA) with memory tiling and parallelization.}
+\item\normalsize{Implemented optimized 2D convolution kernels on FPGA (\textbf{Verilog}), CPU (\textbf{C++}/\textbf{OpenMP}), and GPU (\textbf{CUDA}).}
+% \item\normalsize{Conducted detailed analysis of performance, power, and resource utilization across FPGA, CPU, and GPU platforms.}
+\item\normalsize{Achieved 12$\times$ latency reduction and 10$\times$ throughput gain on FPGA compared to baseline.}
+\experienceBulletListEnd
+
+\projectTitleWithRole{Custom Compiler Targeting x86-64 Assembly}{Team Lead}{Spring 2023}
+\experienceBulletListStart
+\item\normalsize{Led a team of 3 to build a compiler in \textbf{Java} targeting \textbf{x86-64 assembly}, implementing 12.5K lines of code from scratch.}
+% \item\normalsize{Implemented lexical analysis, semantic analysis, and type checking, validating across hundreds of unit and integration tests.}
+\item\normalsize{Implemented end-to-end \textbf{compiler workflow} from parsing to assembly code generation, validating across hundreds of unit and integration tests.}
+\item\normalsize{Implemented \textbf{compiler optimizations} (e.g., register allocation, copy propagation) to improve code size and performance.}
+\experienceBulletListEnd
+
+\projectTitleWithRole{MLSys Teaching Frameworks (Cornell ECE 5545)}{Technical Lead}{June 2022 – Jan 2023}
+\experienceBulletListStart
+\item\normalsize{Led development of user-friendly \textbf{PyTorch} frameworks and tools for speech recognition \textbf{model training}, \textbf{fine-tuning}, \textbf{quantization}, and \textbf{deployment}, including export to \textbf{ONNX} and \textbf{TensorFlow Lite (TFLite)}.}
+  \item\normalsize{Wrote tutorials and assignments on the efficient kernel programming with \textbf{Apache TVM}; mentored students on optimizing tensor operations across CPU, GPU, and FPGA platforms.}
+  \item\normalsize{Directed deployment of a \textbf{TinyML Keyword Spotting} application on embedded devices (\textbf{Arduino} Nano 33 BLE).}
+\experienceBulletListEnd
+
+
+
+\projectTitleWithRole{Quantization Frameworks for Efficient Deep Learning}{Research Lead}{July 2020 – Sep 2022}
+\experienceBulletListStart
+  \item\normalsize{Built \textit{QFX}, a PyTorch toolkit that emulates variable-length fixed-point arithmetic using \textbf{floating-point operations}, enabling differentiable \textbf{quantization-aware training}.}
+  \item\normalsize{Developed \textit{OverQ}, an algorithm that improved post-training quantization accuracy by 5\% Top-1 gain on ResNet50.}
+\experienceBulletListEnd
+
+
+% \projectTitle{Sokoban Game in OCaml}{Fall 2021}
+% \experienceBulletListStart
+%   \item\normalsize{Designed and implemented a \textbf{GUI}-based Sokoban engine in \textbf{OCaml} using the Graphics Module, supporting interactive rendering and state management.}
+%   \item\normalsize{Extended the engine with advanced features including \textbf{multiplayer synchronization}, \textbf{checkpointing}, and \textbf{rule-based constraints} (step limiting).}
+%   \item\normalsize{Developed a procedural map generation algorithm leveraging randomized block placement with validity checks to ensure solvable puzzle configurations.}
+% \experienceBulletListEnd
+
+% \projectTitle{RISC-V Multicore Processor in Verilog}{Fall 2021}
+% \experienceBulletListStart
+%   \item\normalsize{Implemented a \textbf{quad-core RISC-V processor} in \textbf{Verilog} with pipelined execution, bypassing, and a variable-latency \textbf{ALU} including an iterative multiplier.}
+%   \item\normalsize{Designed a \textbf{memory subsystem and cache hierarchy}, featuring a two-way set-associative cache to improve throughput and memory access efficiency.}
+%   \item\normalsize{Verified and benchmarked the \textbf{multicore} system using the PyMTL framework, executing parallel C workloads to validate correctness and performance scaling.}
+% \experienceBulletListEnd
+\projectTitleWithRole{RISC-V Multicore Processor in Verilog}{Team Lead}{Fall 2021}
+\experienceBulletListStart
+  \item\normalsize{Implemented a \textbf{quad-core RISC-V processor} in \textbf{Verilog} with pipelined execution, bypassing, and a variable-latency \textbf{ALU} with iterative multiplier.}
+  \item\normalsize{Designed a \textbf{memory subsystem and cache hierarchy} (two-way set-associative) and benchmarked the multicore system using PyMTL on parallel C workloads to validate performance scaling.}
+\experienceBulletListEnd
+
+
+
+
+
+% Publications - compact
+\section{Publications}
+\vspace{2pt}
+
+% \publicationCompact{Accelerating Diffusion LLM Inference via KV Caching and Guided Diffusion}{\textbf{Zhanqiu Hu}, Jian Meng, Yash Akhauri, Mohamed S. Abdelfattah, Jae-sun Seo, Zhiru Zhang, Udit Gupta}{Submitted to NeurIPS (arXiv:2505.21467)}
+% 
+% \publicationCompact{A Full-Stack HW/SW Co-Design Analysis for Recommendation System Inference}{\textbf{Zhanqiu Hu}, Mark Zhao, Zhiru Zhang, Udit Gupta}{Submitted to IEEE Micro}
+% 
+% \publicationCompact{OverQ: Opportunistic Outlier Quantization for Neural Network Accelerators}{Ritchie Zhao, Jordan Dotzel, \textbf{Zhanqiu Hu}, Preslav Ivanov, Christopher De Sa, Zhiru Zhang}{arXiv:1910.06909}
+
+\publicationCompact{\href{https://arxiv.org/abs/2505.21467}{Accelerating Diffusion LLM Inference via KV Caching and Guided Diffusion}}{\textbf{Zhanqiu Hu}, Jian Meng, Yash Akhauri, Mohamed S. Abdelfattah, Jae-sun Seo, Zhiru Zhang, Udit Gupta}{preprint}
+% \publicationCompact{{Accelerating Diffusion LLM Inference via KV Caching and Guided Diffusion}}{\textbf{Zhanqiu Hu}, Jian Meng, Yash Akhauri, Mohamed S. Abdelfattah, Jae-sun Seo, Zhiru Zhang, Udit Gupta}{preprint}
+
+\publicationCompact{A Full-Stack HW/SW Co-Design Analysis for Recommendation System Inference}{\textbf{Zhanqiu Hu}, Mark Zhao, Zhiru Zhang, Udit Gupta}{Submitted to IEEE Micro}
+
+\publicationCompact{\href{https://arxiv.org/abs/1910.06909}{OverQ: Opportunistic Outlier Quantization for Neural Network Accelerators}}{Ritchie Zhao, Jordan Dotzel, \textbf{Zhanqiu Hu}, Preslav Ivanov, Christopher De Sa, Zhiru Zhang}{preprint}
+% \publicationCompact{{OverQ: Opportunistic Outlier Quantization for Neural Network Accelerators}}{Ritchie Zhao, Jordan Dotzel, \textbf{Zhanqiu Hu}, Preslav Ivanov, Christopher De Sa, Zhiru Zhang}{preprint}
+
+% Teaching Experience - compact
+% \vspace{-1.3em}
+% \section{Teaching Experience}
+% \resumeSubHeadingListStart
+%   \resumeSubheading{Teaching Assistant for multiple CS and ECE courses}{Fall 2020 -- Fall 2024}
+%   {}{Cornell University}
+%   \resumeItemListStart
+%     \resumeItem{Courses: CS 1110 (Python), CS 4780 (Machine Learning), CS 4410 (Operating Systems), ECE 5755 (Computer Architecture).}
+%     \resumeItem{Hosted weekly office hours providing individualized student support and clarifying course concepts.}
+%     \resumeItem{Designed course materials including problem sets and programming assignments.}
+%     \resumeItem{Led exam and project review sessions, preparing students for assessments and critical course milestones.}
+%   \resumeItemListEnd
+% \resumeSubHeadingListEnd
+
+\end{document}
