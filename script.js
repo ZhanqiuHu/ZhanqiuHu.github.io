@@ -203,10 +203,13 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Removed fancy animations for cleaner design
 
-    // Ensure hero title displays correctly
+    // Fix hero title display - prevent any JavaScript interference
     const heroTitle = document.getElementById('main-title');
     if (heroTitle) {
-        // Make sure title is visible and not being manipulated
+        // Restore original HTML content if it got mangled
+        if (heroTitle.innerHTML.includes('&lt;') || heroTitle.innerHTML.includes('&gt;')) {
+            heroTitle.innerHTML = 'Hi, I\'m <span class="highlight">Zhanqiu (Summer) Hu</span>';
+        }
         heroTitle.style.opacity = '1';
         heroTitle.style.visibility = 'visible';
     }
