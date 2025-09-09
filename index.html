@@ -118,10 +118,11 @@
                             Focus on accelerating diffusion-based language models and building scalable ML infrastructure.
                         </p>
                         <ul class="achievements">
-                            <li>Achieved up to <strong>34× inference speedup</strong> for diffusion LLMs through FreeCache and Guided Diffusion algorithms</li>
-                            <li>Designed distributed recommendation framework reducing latency by 40% and doubling throughput</li>
-                            <li>First author on arXiv paper demonstrating scalable long-context generation (>1024 tokens)</li>
-                            <li>Integrated optimizations with <strong>vLLM</strong> and <strong>HuggingFace</strong> for production deployment</li>
+                            <li>Achieved up to <strong>34× inference speedup</strong> by developing <em>FreeCache</em> (KV cache optimization) and <em>Guided Diffusion</em> (cross-model token unmasking), integrated with <strong>vLLM</strong> and <strong>HuggingFace</strong></li>
+                            <li>Designed and benchmarked <strong>test-time optimizations</strong> across reasoning and QA benchmarks (MMLU, GSM8K, PIQA), enabling scalable long-context (>1024 tokens) generation</li>
+                            <li>Designed and deployed production-style framework supporting training and serving of <strong>recommendation models</strong> (two-tower, transformer, DLRM) using <strong>TensorFlow</strong> with microservices architecture</li>
+                            <li>Implemented scalable <strong>data pipeline</strong> with feature engineering in <strong>NVTabular</strong>, fast data access through <strong>Redis</strong>, and integrated vector search with <strong>FAISS</strong></li>
+                            <li>Instrumented design space exploration with profiling using <strong>NVIDIA Nsight Systems</strong> and <strong>Intel VTune</strong>, driving system-level optimizations that reduced latency by 40% and doubled throughput</li>
                         </ul>
                     </div>
                 </div>
@@ -147,9 +148,27 @@
                 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
+                    <div class="timeline-date">Aug 2023 - Dec 2025</div>
+                    <div class="timeline-content">
+                        <h3>Master of Science in Computer Engineering</h3>
+                        <h4>Cornell University</h4>
+                        <p>
+                            Advanced graduate studies focusing on ML systems, computer architecture, and efficient AI inference. 
+                            Expected graduation December 2025.
+                        </p>
+                        <ul class="achievements">
+                            <li>Focus on <strong>ML Systems</strong> and <strong>Computer Architecture</strong></li>
+                            <li>Research in diffusion language model optimization</li>
+                            <li>Advanced coursework in distributed systems and AI infrastructure</li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
                     <div class="timeline-date">Aug 2019 - May 2023</div>
                     <div class="timeline-content">
-                        <h3>Bachelor's Degree</h3>
+                        <h3>Bachelor of Science</h3>
                         <h4>Cornell University</h4>
                         <p>
                             Double Major in Computer Science & Electrical and Computer Engineering. 
@@ -180,7 +199,7 @@
                         <span class="skill-item">HuggingFace</span>
                         <span class="skill-item">vLLM</span>
                         <span class="skill-item">llama.cpp</span>
-                        <span class="skill-item">ONNX</span>
+                        <span class="skill-item">verl (RLHF)</span>
                     </div>
                 </div>
                 
@@ -191,36 +210,39 @@
                         <span class="skill-item">NVIDIA Triton</span>
                         <span class="skill-item">Ray Serve</span>
                         <span class="skill-item">FAISS</span>
+                        <span class="skill-item">gRPC</span>
+                        <span class="skill-item">TVM</span>
+                        <span class="skill-item">Redis</span>
                         <span class="skill-item">Docker</span>
                         <span class="skill-item">Kubernetes</span>
-                        <span class="skill-item">Redis</span>
-                        <span class="skill-item">gRPC</span>
+                        <span class="skill-item">Linux</span>
+                        <span class="skill-item">Slurm</span>
                     </div>
                 </div>
                 
                 <div class="skill-category">
-                    <h3>Programming Languages</h3>
+                    <h3>Programming</h3>
                     <div class="skill-items">
                         <span class="skill-item">Python</span>
                         <span class="skill-item">C/C++</span>
-                        <span class="skill-item">CUDA</span>
-                        <span class="skill-item">JavaScript</span>
-                        <span class="skill-item">TypeScript</span>
                         <span class="skill-item">Java</span>
-                        <span class="skill-item">Verilog</span>
+                        <span class="skill-item">JavaScript</span>
                         <span class="skill-item">OCaml</span>
+                        <span class="skill-item">SystemVerilog</span>
+                        <span class="skill-item">Bash</span>
+                        <span class="skill-item">LaTeX</span>
                     </div>
                 </div>
                 
                 <div class="skill-category">
-                    <h3>Research Areas</h3>
+                    <h3>Expertise</h3>
                     <div class="skill-items">
-                        <span class="skill-item">ML Systems</span>
-                        <span class="skill-item">LLM Optimization</span>
+                        <span class="skill-item">AI/ML</span>
+                        <span class="skill-item">ML Systems & Infra</span>
                         <span class="skill-item">Distributed Systems</span>
                         <span class="skill-item">Computer Architecture</span>
-                        <span class="skill-item">Quantization</span>
-                        <span class="skill-item">FPGA Design</span>
+                        <span class="skill-item">Compilers</span>
+                        <span class="skill-item">Operating Systems</span>
                     </div>
                 </div>
             </div>
@@ -285,17 +307,42 @@
                 
                 <div class="project-card">
                     <div class="project-image">
+                        <i class="fas fa-microprocessor"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>2D Convolution Kernel Optimization</h3>
+                        <p>Implemented optimized 2D convolution kernels on FPGA (Verilog), CPU (C++/OpenMP), and GPU (CUDA). Achieved 12× latency reduction and 10× throughput gain on FPGA compared to baseline.</p>
+                        <div class="project-tech">
+                            <span>Verilog</span>
+                            <span>C++</span>
+                            <span>OpenMP</span>
+                            <span>CUDA</span>
+                            <span>FPGA</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i> Code
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-chart-line"></i> Performance
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
                         <i class="fas fa-microchip"></i>
                     </div>
                     <div class="project-content">
                         <h3>RISC-V Multicore Processor</h3>
-                        <p>Implemented quad-core RISC-V processor in Verilog with pipelined execution, bypassing, and variable-latency ALU. Designed memory subsystem with two-way set-associative cache hierarchy.</p>
+                        <p>Implemented quad-core RISC-V processor in Verilog with pipelined execution, bypassing, and variable-latency ALU with iterative multiplier. Designed memory subsystem and cache hierarchy (two-way set-associative).</p>
                         <div class="project-tech">
                             <span>Verilog</span>
                             <span>RISC-V</span>
                             <span>PyMTL</span>
                             <span>C</span>
-                            <span>FPGA</span>
+                            <span>Cache Design</span>
                         </div>
                         <div class="project-links">
                             <a href="#" class="project-link">
@@ -361,14 +408,14 @@
                         <i class="fas fa-chalkboard-teacher"></i>
                     </div>
                     <div class="project-content">
-                        <h3>MLSys Teaching Frameworks</h3>
-                        <p>Led development of user-friendly PyTorch frameworks for Cornell ECE 5545. Created tools for speech recognition training, quantization, and TinyML deployment on Arduino devices.</p>
+                        <h3>MLSys Teaching Frameworks (Cornell ECE 5545)</h3>
+                        <p>Led development of user-friendly PyTorch frameworks for speech recognition model training, fine-tuning, quantization, and deployment. Wrote TVM tutorials and directed TinyML Keyword Spotting deployment on Arduino Nano 33 BLE.</p>
                         <div class="project-tech">
                             <span>PyTorch</span>
+                            <span>ONNX</span>
                             <span>TensorFlow Lite</span>
                             <span>Apache TVM</span>
                             <span>Arduino</span>
-                            <span>ONNX</span>
                         </div>
                         <div class="project-links">
                             <a href="#" class="project-link">
