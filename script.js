@@ -203,6 +203,14 @@ document.addEventListener('DOMContentLoaded', function() {
 
     // Removed fancy animations for cleaner design
 
+    // Ensure hero title displays correctly
+    const heroTitle = document.getElementById('main-title');
+    if (heroTitle) {
+        // Make sure title is visible and not being manipulated
+        heroTitle.style.opacity = '1';
+        heroTitle.style.visibility = 'visible';
+    }
+
     // Initialize all animations on page load
     setTimeout(() => {
         updateActiveNavLink();
