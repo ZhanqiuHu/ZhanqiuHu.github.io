@@ -283,108 +283,67 @@ h1, h2, h3, h4, h5, h6 {
     background: #f8f9fa;
 }
 
-.timeline {
-    max-width: 800px;
+.experience-list {
+    max-width: 900px;
     margin: 0 auto;
-    position: relative;
 }
 
-.timeline::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 2px;
-    height: 100%;
-    background: #dee2e6;
-}
-
-.timeline-item {
-    position: relative;
-    margin-bottom: 3rem;
-    display: flex;
-    align-items: center;
-}
-
-.timeline-item:nth-child(odd) {
-    flex-direction: row-reverse;
-}
-
-.timeline-dot {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 12px;
-    height: 12px;
-    background: #2c3e50;
-    border-radius: 50%;
-    border: 3px solid #fff;
-    box-shadow: 0 0 0 2px #2c3e50;
-    z-index: 2;
-}
-
-.timeline-date {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: -35px;
-    background: #2c3e50;
-    color: white;
-    padding: 4px 12px;
-    border-radius: 4px;
-    font-size: 0.9rem;
-    font-weight: 500;
-    white-space: nowrap;
-}
-
-.timeline-content {
+.experience-item {
     background: white;
-    padding: 1.5rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
     border: 1px solid #e9ecef;
     border-radius: 6px;
-    width: calc(50% - 40px);
-    margin: 40px 0;
 }
 
-.timeline-item:nth-child(odd) .timeline-content {
-    margin-right: auto;
-    margin-left: 40px;
-}
-
-.timeline-item:nth-child(even) .timeline-content {
-    margin-left: auto;
-    margin-right: 40px;
-}
-
-.timeline-content h3 {
-    color: #2c3e50;
-    margin-bottom: 0.5rem;
-    font-size: 1.3rem;
-}
-
-.timeline-content h4 {
-    color: #6c757d;
+.experience-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
     margin-bottom: 1rem;
-    font-weight: 500;
 }
 
-.timeline-content p {
+.experience-title h3 {
+    color: #2c3e50;
+    margin-bottom: 0.25rem;
+    font-size: 1.25rem;
+}
+
+.experience-title h4 {
+    color: #6c757d;
+    margin-bottom: 0;
+    font-weight: 500;
+    font-size: 1rem;
+}
+
+.experience-date {
+    color: #2c3e50;
+    font-weight: 600;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    margin-left: 1rem;
+}
+
+.experience-item p {
     color: #666;
     margin-bottom: 1rem;
+    line-height: 1.5;
 }
 
-.achievements {
+.experience-item ul {
     list-style: none;
+    padding-left: 0;
 }
 
-.achievements li {
+.experience-item li {
     color: #666;
     margin-bottom: 0.5rem;
     position: relative;
     padding-left: 20px;
+    line-height: 1.5;
 }
 
-.achievements li::before {
+.experience-item li::before {
     content: '•';
     position: absolute;
     left: 0;
@@ -727,38 +686,14 @@ h1, h2, h3, h4, h5, h6 {
         grid-template-columns: 1fr;
     }
 
-    .timeline::before {
-        left: 20px;
-    }
-
-    .timeline-item {
+    .experience-header {
         flex-direction: column;
         align-items: flex-start;
-        margin-left: 40px;
     }
 
-    .timeline-item:nth-child(odd) {
-        flex-direction: column;
-    }
-
-    .timeline-dot {
-        left: 20px;
-        transform: translateX(-50%);
-    }
-
-    .timeline-date {
-        left: 60px;
-        transform: none;
-    }
-
-    .timeline-content {
-        width: calc(100% - 60px);
-        margin: 40px 0 0 60px;
-    }
-
-    .timeline-item:nth-child(odd) .timeline-content,
-    .timeline-item:nth-child(even) .timeline-content {
-        margin: 40px 0 0 60px;
+    .experience-date {
+        margin-left: 0;
+        margin-top: 0.5rem;
     }
 
     .skills-grid {
