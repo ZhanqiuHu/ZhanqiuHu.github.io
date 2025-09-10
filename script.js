@@ -218,6 +218,13 @@ document.addEventListener('DOMContentLoaded', function() {
     setTimeout(() => {
         updateActiveNavLink();
     }, 500);
+    
+    // Initialize all project details as collapsed
+    const projectDetails = document.querySelectorAll('.project-details');
+    projectDetails.forEach(detail => {
+        detail.classList.add('collapsed');
+        detail.style.maxHeight = '0';
+    });
 });
 
 // Utility function to debounce scroll events
@@ -237,3 +244,21 @@ function debounce(func, wait) {
 const optimizedScrollHandler = debounce(function() {
     // Add any scroll-based functionality here
 }, 10);
+
+// Toggle project dropdown
+function toggleProject(projectId) {
+    const projectDetails = document.getElementById(projectId);
+    const dropdownIcon = projectDetails.previousElementSibling.querySelector('.dropdown-icon');
+    
+    if (projectDetails.classList.contains('collapsed')) {
+        // Expand
+        projectDetails.classList.remove('collapsed');
+        projectDetails.style.maxHeight = projectDetails.scrollHeight + 'px';
+        dropdownIcon.classList.add('rotated');
+    } else {
+        // Collapse
+        projectDetails.classList.add('collapsed');
+        projectDetails.style.maxHeight = '0';
+        dropdownIcon.classList.remove('rotated');
+    }
+}

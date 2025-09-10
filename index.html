@@ -18,12 +18,6 @@
                     <a href="#home" class="nav-link">About</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#experience" class="nav-link">Experience</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#education" class="nav-link">Education</a>
-                </li>
-                <li class="nav-item">
                     <a href="#research" class="nav-link">Research</a>
                 </li>
                 <li class="nav-item">
@@ -34,9 +28,6 @@
                 </li>
                 <li class="nav-item">
                     <a href="#publications" class="nav-link">Publications</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
                 </li>
             </ul>
             <div class="hamburger">
@@ -50,28 +41,6 @@
     <!-- Hero/About Section -->
     <section id="home" class="hero">
         <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title" id="main-title">
-                    Hi, I'm <span class="highlight">Zhanqiu (Summer) Hu</span>
-                </h1>
-                <h2 class="hero-subtitle">Machine Learning Engineer & Researcher</h2>
-                
-                <div class="about-content">
-                    <p>
-                        I'm a Machine Learning Engineer and researcher with expertise in AI systems optimization, distributed computing, and efficient inference. 
-                        Currently pursuing my MS in Computer Engineering at Cornell Tech, I specialize in accelerating large language models and building scalable ML infrastructure.
-                    </p>
-                    <p>
-                        My research focuses on test-time optimization for diffusion-based language models, achieving significant inference speedup through novel caching strategies. 
-                        I have hands-on experience with production ML systems, having worked at AWS and published research in efficient AI inference.
-                    </p>
-                </div>
-                
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Get In Touch</a>
-                    <a href="#experience" class="btn btn-secondary">View My Work</a>
-                </div>
-            </div>
             <div class="hero-image">
                 <div class="profile-photo">
                     <img src="images/zhanqiuhu.png" alt="Zhanqiu (Summer) Hu">
@@ -89,60 +58,38 @@
                         <i class="fas fa-map-marker-alt"></i>
                         <span>New York, NY</span>
                     </div>
+                    <div class="contact-item" style="display: flex; gap: 1rem;">
+                        <a href="https://www.linkedin.com/in/zhanqiu-hu-5a602317a/" target="_blank" style="color: #666; text-decoration: none;">
+                            <i class="fab fa-linkedin" style="font-size: 1.5rem;"></i>
+                        </a>
+                        <a href="https://github.com/ZhanqiuHu" target="_blank" style="color: #666; text-decoration: none;">
+                            <i class="fab fa-github" style="font-size: 1.5rem;"></i>
+                        </a>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="section">
-        <div class="container">
-            <h2>Experience</h2>
-            
-            <div class="job">
-                <h3>Graduate Research Assistant</h3>
-                <h4>Cornell Tech, New York, NY | Aug 2023 - Present</h4>
-                <p>Leading research in AI systems optimization and efficient machine learning inference.</p>
-                <ul>
-                    <li>Achieved up to <strong>34× inference speedup</strong> by developing FreeCache (KV cache optimization) and Guided Diffusion (cross-model token unmasking), integrated with <strong>vLLM</strong> and <strong>HuggingFace</strong></li>
-                    <li>Designed and benchmarked test-time optimizations across reasoning and QA benchmarks (MMLU, GSM8K, PIQA)</li>
-                    <li>Built production-style framework for recommendation models (two-tower, transformer, DLRM) using <strong>TensorFlow</strong></li>
-                    <li>Reduced latency by 40% and doubled throughput through system-level optimizations with <strong>NVIDIA Nsight Systems</strong> and <strong>Intel VTune</strong></li>
-                </ul>
-            </div>
-            
-            <div class="job">
-                <h3>Software Development Engineer Intern</h3>
-                <h4>Amazon Web Services (AWS), Boston, MA | May 2022 - Aug 2022</h4>
-                <p>Revamped AWS FSx frontend infrastructure with modern technologies for cloud storage services.</p>
-                <ul>
-                    <li>Upgraded FSx frontend codebase to latest <strong>TypeScript/React</strong> with AWS design standards</li>
-                    <li>Implemented scalable state management using <strong>Redux Toolkit</strong> and <strong>Redux Observable</strong></li>
-                    <li>Integrated automated testing into CI/CD pipelines improving code quality and deployment reliability</li>
-                    <li>Delivered migration tools adopted by <strong>5+ teams</strong>, reducing manual effort across organization</li>
-                </ul>
+            <div class="hero-content">
+                <h1 class="hero-title" id="main-title">
+                    Hi, I'm <span class="highlight">Zhanqiu (Summer) Hu</span>
+                </h1>
+                
+                <div class="about-content">
+                    <p>
+                        I am a graduate student at Cornell Tech and a research assistant at the <a href="https://www.csl.cornell.edu/" target="_blank" style="color: #0066cc; text-decoration: underline;">Cornell Computer Systems Laboratory</a>, where I design efficient algorithms for large language models and build scalable ML systems. 
+                        I received my B.S. in Computer Science (CS) and Electrical and Computer Engineering (ECE) from Cornell University with summa cum laude.
+                    </p>
+                    <p>
+                        My recent work explores test-time optimization for diffusion language models, focusing on caching strategies to accelerate inference. In the past, I have worked on recommendation systems (retrieval and ranking) and DNN model quantization.
+                    </p>
+                    <p>
+                        I am broadly interested in ML systems optimization, distributed computing, and efficient inference for large-scale AI, with an emphasis on connecting research to practical and scalable solutions.
+                    </p>
+                </div>
+                
             </div>
         </div>
     </section>
 
-    <!-- Education Section -->
-    <section id="education" class="section">
-        <div class="container">
-            <h2>Education</h2>
-            
-            <div class="job">
-                <h3>Master of Science in Computer Engineering</h3>
-                <h4>Cornell University | Aug 2023 - Dec 2025</h4>
-                <p>Advanced graduate studies focusing on ML systems, computer architecture, and efficient AI inference.</p>
-            </div>
-            
-            <div class="job">
-                <h3>Bachelor of Science</h3>
-                <h4>Cornell University | Aug 2019 - May 2023</h4>
-                <p>Double Major in Computer Science & Electrical and Computer Engineering. GPA: <strong>4.05/4.0</strong>, graduated <em>summa cum laude</em>.</p>
-            </div>
-        </div>
-    </section>
 
     <!-- Skills Section -->
     <!-- 
@@ -213,69 +160,91 @@
     <section id="research" class="section">
         <div class="container">
             <h2>Research Projects</h2>
-            <div class="projects-grid">
+            <div class="research-grid">
                 <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-rocket"></i>
-                    </div>
                     <div class="project-content">
-                        <h3>Diffusion LLM Acceleration</h3>
-                        <p>Achieved up to 34× inference speedup for diffusion-based language models through FreeCache (KV optimization) and Guided Diffusion techniques. Integrated with vLLM and HuggingFace for production deployment.</p>
-                        <div class="project-tech">
-                            <span>PyTorch</span>
-                            <span>vLLM</span>
-                            <span>HuggingFace</span>
-                            <span>CUDA</span>
-                            <span>Python</span>
+                        <div class="project-header" onclick="toggleProject('project1')">
+                            <div>
+                                <h3>FlashDLM: Accelerating Diffusion Language Models via Caching and Guided Diffusion 
+                                    <a href="https://arxiv.org/abs/2505.21467" class="paper-link-preview" onclick="event.stopPropagation();">
+                                        <i class="fas fa-file-alt"></i>
+                                    </a>
+                                </h3>
+                                <p class="project-preview">Novel caching strategies and guided diffusion for 34× inference speedup</p>
+                            </div>
+                            <span class="dropdown-icon">▾</span>
                         </div>
-                        <div class="project-links">
-                            <a href="https://arxiv.org/abs/2505.21467" class="project-link">
-                                <i class="fas fa-file-alt"></i> Paper
-                            </a>
-                            <span class="project-link-disabled">
-                                <i class="fab fa-github"></i> Code (coming soon)
-                            </span>
+                        <div class="project-details" id="project1">
+                            <p>Diffusion language models enable parallel token generation and bidirectional context but suffer from slow inference due to iterative denoising, making them impractical for long context reasoning compared to autoregressive models.</p>
+                            <p>This work introduces <strong>FreeCache</strong> and <strong>Guided Diffusion</strong>, two training-free techniques for accelerating diffusion inference. FreeCache reuses stable key-value projections across steps, and Guided Diffusion employs a lightweight autoregressive model to guide token unmasking, reducing the number of iterations while preserving coherence.</p>
+                            <p>Together these methods achieve up to 34× end-to-end speedup with negligible accuracy loss, making diffusion models as efficient as autoregressive baselines and enabling their deployment in real-world applications.</p>
+                            <div class="project-figures" style="display: flex; gap: 1rem; margin: 1rem 0; justify-content: center; flex-wrap: wrap; align-items: flex-start;">
+                                <div class="figure-item" style="flex: 0 0 40%;">
+                                    <img src="images/flashdlm_freecache.png" alt="FreeCache Architecture" style="width: 100%; height: 280px; object-fit: contain; border: 1px solid #e9ecef; border-radius: 6px;">
+                                </div>
+                                <div class="figure-item" style="flex: 0 0 50%;">
+                                    <img src="images/flashdlm_guided_diffusion.png" alt="Guided Diffusion Architecture" style="width: 100%; height: 280px; object-fit: contain; border: 1px solid #e9ecef; border-radius: 6px;">
+                                </div>
+                            </div>
+                            <div class="project-links">
+                                <a href="https://arxiv.org/abs/2505.21467" class="project-link">
+                                    <i class="fas fa-file-alt"></i> Paper
+                                </a>
+                                <span class="project-link-disabled">
+                                    <i class="fab fa-github"></i> Code (coming soon)
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </div>
                 
                 <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-server"></i>
-                    </div>
                     <div class="project-content">
-                        <h3>Distributed Recommendation Framework</h3>
-                        <p>Built production-style framework for training and serving recommendation models using microservices architecture. Reduced latency by 40% and doubled throughput via co-optimization.</p>
-                        <div class="project-tech">
-                            <span>TensorFlow</span>
-                            <span>Ray</span>
-                            <span>gRPC</span>
-                            <span>NVIDIA Triton</span>
-                            <span>FAISS</span>
-                            <span>Redis</span>
+                        <div class="project-header" onclick="toggleProject('project2')">
+                            <div>
+                                <h3>ReCoOpt: Co-Design Framework for Efficient Recommendation System</h3>
+                                <p class="project-preview">Hardware-software co-design for end-to-end recommendation optimization</p>
+                            </div>
+                            <span class="dropdown-icon">▾</span>
                         </div>
-                        <div class="project-links">
+                        <div class="project-details" id="project2">
+                            <p>Modern recommendation systems execute multi-stage pipelines at massive scale, but most optimization efforts target only the deep neural network ranking stage, leaving major bottlenecks in feature fetching, approximate nearest neighbor search, and orchestration.</p>
+                            <p>To address this gap, <strong>ReCoOpt</strong> is introduced as a modular framework that enables systematic hardware and software co-design of end-to-end recommendation inference. The framework profiles and tunes retrieval, feature fetching, and ranking across heterogeneous platforms to explore balanced pipeline configurations.</p>
+                            <p>Using MovieLens datasets, <strong>ReCoOpt</strong> demonstrates that holistic co-design can improve hit rate by 0.05 under a fixed latency budget, double throughput, or reduce latency by 40%, showing that balanced hardware and software optimization is essential for scalable recommendation engines.</p>
+                            <div class="project-figure">
+                                <img src="images/RecSysSystemDiagram.png" alt="Recommendation System Architecture Diagram" style="max-width: 60%; height: auto; margin: 1rem auto; display: block; border: 1px solid #e9ecef; border-radius: 6px;">
+                            </div>
+                            <div class="project-links">
+                            </div>
                         </div>
                     </div>
-                </div>
+                </div> 
                 
                 <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-brain"></i>
-                    </div>
                     <div class="project-content">
-                        <h3>Quantization Frameworks (QFX)</h3>
-                        <p>Built PyTorch toolkit emulating variable-length fixed-point arithmetic for differentiable quantization-aware training. Developed OverQ algorithm improving post-training quantization accuracy by 5%.</p>
-                        <div class="project-tech">
-                            <span>PyTorch</span>
-                            <span>Quantization</span>
-                            <span>Deep Learning</span>
-                            <span>Python</span>
+                        <div class="project-header" onclick="toggleProject('project3')">
+                            <div>
+                                <h3>OverQ: Overwrite Quantization for Outlier-Aware CNN Acceleration 
+                                    <a href="https://arxiv.org/abs/1910.06909" class="paper-link-preview" onclick="event.stopPropagation();">
+                                        <i class="fas fa-file-alt"></i>
+                                    </a>
+                                </h3>
+                                <p class="project-preview">Overwrite quantization technique for handling activation outliers in CNNs</p>
+                            </div>
+                            <span class="dropdown-icon">▾</span>
                         </div>
-                        <div class="project-links">
-                            <a href="https://arxiv.org/abs/1910.06909" class="project-link">
-                                <i class="fas fa-file-alt"></i> Paper
-                            </a>
+                        <div class="project-details" id="project3">
+                            <p>Low precision quantization reduces the cost of deep neural networks but suffers from rare outliers in activations that degrade accuracy. Existing fixes require retraining or expensive outlier hardware.</p>
+                            <p><strong>OverQ</strong> introduces overwrite quantization, which lets outliers reuse nearby zeros to gain extra range or precision. A simple cascading mechanism expands coverage, and the design fits efficiently into systolic array accelerators.</p>
+                            <p>With modest overhead, <strong>OverQ</strong> handles over 90% of outliers, improving ImageNet accuracy by up to 5% at 4 bits while adding only about 10% area per processing element.</p>
+                            <div class="project-figure">
+                                <img src="images/overq.png" alt="OverQ Architecture" style="max-width: 60%; height: auto; margin: 1rem auto; display: block; border: 1px solid #e9ecef; border-radius: 6px;">
+                            </div>
+                            <div class="project-links">
+                                <a href="https://arxiv.org/abs/1910.06909" class="project-link">
+                                    <i class="fas fa-file-alt"></i> Paper
+                                </a>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -286,14 +255,11 @@
     <!-- Teaching Experience Section -->
     <section id="teaching" class="section">
         <div class="container">
-            <h2>Teaching Experience</h2>
+            <h2>Teaching</h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-chalkboard-teacher"></i>
-                    </div>
                     <div class="project-content">
-                        <h3>MLSys Teaching Frameworks (Cornell ECE 5545)</h3>
+                        <h3>Course Development: MLSys Teaching Frameworks (Cornell ECE 5545)</h3>
                         <p>Led development of user-friendly PyTorch frameworks for speech recognition model training, fine-tuning, quantization, and deployment. Wrote TVM tutorials and directed TinyML Keyword Spotting deployment on Arduino Nano 33 BLE.</p>
                         <div class="project-tech">
                             <span>PyTorch</span>
@@ -309,6 +275,19 @@
                         </div>
                     </div>
                 </div>
+                
+                <div class="project-card">
+                    <div class="project-content">
+                        <h3>Teaching Assistant</h3>
+                        <p class="ta-intro">Served as Teaching Assistant for:</p>
+                        <ul>
+                            <li>CS 1110: Introduction to Computing: A Design and Development Perspective</li>
+                            <li>CS 5780: Introduction to Machine Learning</li>
+                            <li>CS 5410: Operating Systems</li>
+                            <li>ECE 5755: Modern Computer Systems and Architecture</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -319,12 +298,10 @@
             <h2>Technical Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-code"></i>
-                    </div>
                     <div class="project-content">
                         <h3>Custom Compiler for x86-64</h3>
-                        <p>Led team of 3 to build complete compiler in Java targeting x86-64 assembly. Implemented 12.5K lines of code with lexical analysis, semantic analysis, and optimization passes.</p>
+                        <p>Led team of 3 to build complete compiler in Java targeting x86-64 assembly.<br>
+                        Implemented 12.5K lines of code with lexical analysis, semantic analysis, and optimization passes.</p>
                         <div class="project-tech">
                             <span>Java</span>
                             <span>x86-64</span>
@@ -337,12 +314,14 @@
                 </div>
                 
                 <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-gamepad"></i>
-                    </div>
                     <div class="project-content">
-                        <h3>Sokoban Game Engine in OCaml</h3>
-                        <p>Designed and implemented a GUI-based Sokoban engine in OCaml using the Graphics Module, supporting interactive rendering and state management. Extended with multiplayer synchronization, checkpointing, and rule-based constraints.</p>
+                        <h3>Sokoban Game Engine in OCaml 
+                            <a href="https://github.com/ZhanqiuHu/sokoban-ocaml" class="code-link-inline" target="_blank" onclick="event.stopPropagation();">
+                                <i class="fab fa-github"></i>
+                            </a>
+                        </h3>
+                        <p>Designed and implemented a GUI-based Sokoban engine in OCaml using the Graphics Module, supporting interactive rendering and state management.<br>
+                        Extended with multiplayer synchronization, checkpointing, and rule-based constraints.</p>
                         <div class="project-tech">
                             <span>OCaml</span>
                             <span>Graphics Module</span>
@@ -355,12 +334,10 @@
                 </div>
                 
                 <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-microchip"></i>
-                    </div>
                     <div class="project-content">
                         <h3>RISC-V Multicore Processor</h3>
-                        <p>Implemented quad-core RISC-V processor in Verilog with pipelined execution, bypassing, and variable-latency ALU with iterative multiplier. Designed memory subsystem and cache hierarchy (two-way set-associative).</p>
+                        <p>Implemented quad-core RISC-V processor in Verilog with pipelined execution, bypassing, and variable-latency ALU with iterative multiplier.<br>
+                        Designed memory subsystem and cache hierarchy (two-way set-associative).</p>
                         <div class="project-tech">
                             <span>Verilog</span>
                             <span>RISC-V</span>
@@ -377,14 +354,13 @@
     </section>
 
     <!-- Publications Section -->
-    <section id="publications" class="publications">
+    <section id="publications" class="section">
         <div class="container">
-            <h2 class="section-title">Research Publications</h2>
+            <h2 class="section-title">Publications</h2>
             <div class="publications-list">
                 <div class="publication-item">
-                    <h3>Accelerating Diffusion LLM Inference via KV Caching and Guided Diffusion</h3>
+                    <h3>Accelerating Diffusion LLM Inference via KV Caching and Guided Diffusion <span class="venue-inline">arXiv preprint (arXiv:2505.21467)</span></h3>
                     <p class="authors"><strong>Zhanqiu Hu</strong>, Jian Meng, Yash Akhauri, Mohamed S. Abdelfattah, Jae-sun Seo, Zhiru Zhang, Udit Gupta</p>
-                    <p class="venue">arXiv preprint (arXiv:2505.21467)</p>
                     <div class="publication-links">
                         <a href="https://arxiv.org/abs/2505.21467" class="btn btn-secondary">
                             <i class="fas fa-file-alt"></i> Read Paper
@@ -393,15 +369,13 @@
                 </div>
                 
                 <div class="publication-item">
-                    <h3>A Full-Stack HW/SW Co-Design Analysis for Recommendation System Inference</h3>
+                    <h3>A Full-Stack HW/SW Co-Design Analysis for Recommendation System Inference <span class="venue-inline">Submitted to IEEE Micro</span></h3>
                     <p class="authors"><strong>Zhanqiu Hu</strong>, Mark Zhao, Zhiru Zhang, Udit Gupta</p>
-                    <p class="venue">Submitted to IEEE Micro</p>
                 </div>
                 
                 <div class="publication-item">
-                    <h3>OverQ: Opportunistic Outlier Quantization for Neural Network Accelerators</h3>
+                    <h3>OverQ: Opportunistic Outlier Quantization for Neural Network Accelerators <span class="venue-inline">arXiv preprint (arXiv:1910.06909)</span></h3>
                     <p class="authors">Ritchie Zhao, Jordan Dotzel, <strong>Zhanqiu Hu</strong>, Preslav Ivanov, Christopher De Sa, Zhiru Zhang</p>
-                    <p class="venue">arXiv preprint (arXiv:1910.06909)</p>
                     <div class="publication-links">
                         <a href="https://arxiv.org/abs/1910.06909" class="btn btn-secondary">
                             <i class="fas fa-file-alt"></i> Read Paper
@@ -412,42 +386,6 @@
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Let's Connect</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Get in Touch</h3>
-                    <p>I'm always interested in new opportunities and interesting projects. Let's discuss how we can work together!</p>
-                    
-                    <div class="contact-items">
-                        <div class="contact-item">
-                            <i class="fas fa-envelope"></i>
-                            <span>zh338@cornell.edu</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-phone"></i>
-                            <span>(607) 216-7811</span>
-                        </div>
-                        <div class="contact-item">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>New York, NY</span>
-                        </div>
-                    </div>
-                    
-                    <div class="social-links">
-                        <a href="#" class="social-link">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="#" class="social-link">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Footer -->
     <footer class="footer">
