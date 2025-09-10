@@ -443,12 +443,14 @@ h1, h2, h3, h4, h5, h6 {
     display: flex;
     flex-direction: column;
     gap: 0.7rem;
+    margin-top: -0.2rem;
 }
 
 .research-grid {
     display: flex;
     flex-direction: column;
     gap: 0.7rem;
+    margin-top: -0.2rem;
 }
 
 .project-card {
@@ -548,13 +550,13 @@ h1, h2, h3, h4, h5, h6 {
 
 .project-content h3 {
     color: #2c3e50;
-    margin-bottom: 0.4rem;
+    margin-bottom: 0.6rem;
     font-size: 1.2rem;
 }
 
 .project-content p {
     color: #666;
-    margin-bottom: 0.7rem;
+    margin-bottom: 0.9rem;
     font-size: 0.95rem;
     line-height: 1.5;
 }
@@ -600,7 +602,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .publications-list {
     max-width: 900px;
-    margin: 0 auto;
+    margin: -0.2rem auto 0 auto;
 }
 
 .publication-item {
