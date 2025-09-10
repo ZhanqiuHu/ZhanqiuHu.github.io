@@ -939,3 +939,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Simplified design without complex animations */
+
+/* TEST: Force visible styling to debug */
+body {
+    background-color: #f0f0f0 !important;
+}
+.main-layout {
+    background-color: #e0e0e0 !important;
+    border: 3px solid red !important;
+}
+.sidebar {
+    background-color: #d0d0d0 !important;
+    border: 3px solid blue !important;
+}
