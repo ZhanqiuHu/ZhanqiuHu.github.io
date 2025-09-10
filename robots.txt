@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://zhanqiuhu.github.io/sitemap.xml
