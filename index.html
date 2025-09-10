@@ -24,7 +24,10 @@
                     <a href="#education" class="nav-link">Education</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#skills" class="nav-link">Skills</a>
+                    <a href="#research" class="nav-link">Research</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#teaching" class="nav-link">Teaching</a>
                 </li>
                 <li class="nav-item">
                     <a href="#projects" class="nav-link">Projects</a>
@@ -70,8 +73,8 @@
                 </div>
             </div>
             <div class="hero-image">
-                <div class="profile-placeholder">
-                    <i class="fas fa-user"></i>
+                <div class="profile-photo">
+                    <img src="images/zhanqiuhu.png" alt="Zhanqiu (Summer) Hu">
                 </div>
                 <div class="contact-info-hero">
                     <div class="contact-item">
@@ -142,6 +145,7 @@
     </section>
 
     <!-- Skills Section -->
+    <!-- 
     <section id="skills" class="skills">
         <div class="container">
             <h2 class="section-title">Technical Skills</h2>
@@ -203,11 +207,12 @@
             </div>
         </div>
     </section>
+    -->
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
+    <!-- Research Projects Section -->
+    <section id="research" class="section">
         <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
+            <h2>Research Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">
@@ -227,9 +232,9 @@
                             <a href="https://arxiv.org/abs/2505.21467" class="project-link">
                                 <i class="fas fa-file-alt"></i> Paper
                             </a>
-                            <a href="#" class="project-link">
-                                <i class="fab fa-github"></i> Code
-                            </a>
+                            <span class="project-link-disabled">
+                                <i class="fab fa-github"></i> Code (coming soon)
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -243,93 +248,13 @@
                         <p>Built production-style framework for training and serving recommendation models using microservices architecture. Reduced latency by 40% and doubled throughput via co-optimization.</p>
                         <div class="project-tech">
                             <span>TensorFlow</span>
-                            <span>Ray Serve</span>
+                            <span>Ray</span>
                             <span>gRPC</span>
                             <span>NVIDIA Triton</span>
                             <span>FAISS</span>
                             <span>Redis</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">
-                                <i class="fas fa-file-alt"></i> Research
-                            </a>
-                            <a href="#" class="project-link">
-                                <i class="fab fa-github"></i> Framework
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-microprocessor"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>2D Convolution Kernel Optimization</h3>
-                        <p>Implemented optimized 2D convolution kernels on FPGA (Verilog), CPU (C++/OpenMP), and GPU (CUDA). Achieved 12× latency reduction and 10× throughput gain on FPGA compared to baseline.</p>
-                        <div class="project-tech">
-                            <span>Verilog</span>
-                            <span>C++</span>
-                            <span>OpenMP</span>
-                            <span>CUDA</span>
-                            <span>FPGA</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-chart-line"></i> Performance
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-microchip"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>RISC-V Multicore Processor</h3>
-                        <p>Implemented quad-core RISC-V processor in Verilog with pipelined execution, bypassing, and variable-latency ALU with iterative multiplier. Designed memory subsystem and cache hierarchy (two-way set-associative).</p>
-                        <div class="project-tech">
-                            <span>Verilog</span>
-                            <span>RISC-V</span>
-                            <span>PyMTL</span>
-                            <span>C</span>
-                            <span>Cache Design</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> Demo
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-image">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <div class="project-content">
-                        <h3>Custom Compiler for x86-64</h3>
-                        <p>Led team of 3 to build complete compiler in Java targeting x86-64 assembly. Implemented 12.5K lines of code with lexical analysis, semantic analysis, and optimization passes.</p>
-                        <div class="project-tech">
-                            <span>Java</span>
-                            <span>x86-64</span>
-                            <span>Assembly</span>
-                            <span>Compilers</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="#" class="project-link">
-                                <i class="fab fa-github"></i> Code
-                            </a>
-                            <a href="#" class="project-link">
-                                <i class="fas fa-external-link-alt"></i> Tests
-                            </a>
                         </div>
                     </div>
                 </div>
@@ -351,13 +276,18 @@
                             <a href="https://arxiv.org/abs/1910.06909" class="project-link">
                                 <i class="fas fa-file-alt"></i> Paper
                             </a>
-                            <a href="#" class="project-link">
-                                <i class="fab fa-github"></i> Code
-                            </a>
                         </div>
                     </div>
                 </div>
-                
+            </div>
+        </div>
+    </section>
+
+    <!-- Teaching Experience Section -->
+    <section id="teaching" class="section">
+        <div class="container">
+            <h2>Teaching Experience</h2>
+            <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">
                         <i class="fas fa-chalkboard-teacher"></i>
@@ -373,12 +303,72 @@
                             <span>Arduino</span>
                         </div>
                         <div class="project-links">
-                            <a href="#" class="project-link">
-                                <i class="fas fa-graduation-cap"></i> Course
+                            <a href="https://abdelfattah-class.github.io/ece5545/" class="project-link">
+                                <i class="fas fa-graduation-cap"></i> Course Website
                             </a>
-                            <a href="#" class="project-link">
-                                <i class="fab fa-github"></i> Framework
-                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2>Technical Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Custom Compiler for x86-64</h3>
+                        <p>Led team of 3 to build complete compiler in Java targeting x86-64 assembly. Implemented 12.5K lines of code with lexical analysis, semantic analysis, and optimization passes.</p>
+                        <div class="project-tech">
+                            <span>Java</span>
+                            <span>x86-64</span>
+                            <span>Assembly</span>
+                            <span>Compilers</span>
+                        </div>
+                        <div class="project-links">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-gamepad"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>Sokoban Game Engine in OCaml</h3>
+                        <p>Designed and implemented a GUI-based Sokoban engine in OCaml using the Graphics Module, supporting interactive rendering and state management. Extended with multiplayer synchronization, checkpointing, and rule-based constraints.</p>
+                        <div class="project-tech">
+                            <span>OCaml</span>
+                            <span>Graphics Module</span>
+                            <span>GUI</span>
+                            <span>Game Engine</span>
+                        </div>
+                        <div class="project-links">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <i class="fas fa-microchip"></i>
+                    </div>
+                    <div class="project-content">
+                        <h3>RISC-V Multicore Processor</h3>
+                        <p>Implemented quad-core RISC-V processor in Verilog with pipelined execution, bypassing, and variable-latency ALU with iterative multiplier. Designed memory subsystem and cache hierarchy (two-way set-associative).</p>
+                        <div class="project-tech">
+                            <span>Verilog</span>
+                            <span>RISC-V</span>
+                            <span>PyMTL</span>
+                            <span>C</span>
+                            <span>Cache Design</span>
+                        </div>
+                        <div class="project-links">
                         </div>
                     </div>
                 </div>
@@ -395,10 +385,6 @@
                     <h3>Accelerating Diffusion LLM Inference via KV Caching and Guided Diffusion</h3>
                     <p class="authors"><strong>Zhanqiu Hu</strong>, Jian Meng, Yash Akhauri, Mohamed S. Abdelfattah, Jae-sun Seo, Zhiru Zhang, Udit Gupta</p>
                     <p class="venue">arXiv preprint (arXiv:2505.21467)</p>
-                    <p class="description">
-                        First-authored research demonstrating up to 34× inference speedup for diffusion-based language models through novel 
-                        KV cache optimization and cross-model token unmasking techniques.
-                    </p>
                     <div class="publication-links">
                         <a href="https://arxiv.org/abs/2505.21467" class="btn btn-secondary">
                             <i class="fas fa-file-alt"></i> Read Paper
@@ -410,20 +396,12 @@
                     <h3>A Full-Stack HW/SW Co-Design Analysis for Recommendation System Inference</h3>
                     <p class="authors"><strong>Zhanqiu Hu</strong>, Mark Zhao, Zhiru Zhang, Udit Gupta</p>
                     <p class="venue">Submitted to IEEE Micro</p>
-                    <p class="description">
-                        Comprehensive analysis of hardware-software co-design for recommendation systems, focusing on 
-                        distributed framework optimization and performance bottleneck identification.
-                    </p>
                 </div>
                 
                 <div class="publication-item">
                     <h3>OverQ: Opportunistic Outlier Quantization for Neural Network Accelerators</h3>
                     <p class="authors">Ritchie Zhao, Jordan Dotzel, <strong>Zhanqiu Hu</strong>, Preslav Ivanov, Christopher De Sa, Zhiru Zhang</p>
                     <p class="venue">arXiv preprint (arXiv:1910.06909)</p>
-                    <p class="description">
-                        Novel quantization algorithm that improves post-training quantization accuracy by 5% Top-1 gain on ResNet50 
-                        through opportunistic outlier handling in neural network accelerators.
-                    </p>
                     <div class="publication-links">
                         <a href="https://arxiv.org/abs/1910.06909" class="btn btn-secondary">
                             <i class="fas fa-file-alt"></i> Read Paper
@@ -465,27 +443,8 @@
                         <a href="#" class="social-link">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="#" class="social-link">
-                            <i class="fab fa-twitter"></i>
-                        </a>
                     </div>
                 </div>
-                
-                <form class="contact-form">
-                    <div class="form-group">
-                        <input type="text" name="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="text" name="subject" placeholder="Subject" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
             </div>
         </div>
     </section>
