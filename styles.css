@@ -340,7 +340,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Simple Section Styling */
 .section {
-    padding: 1.5rem 2rem;
+    padding: 1.5rem 0;
     background: white;
 }
 
@@ -499,6 +499,11 @@ h1, h2, h3, h4, h5, h6 {
     padding: 0.9rem 1rem;
 }
 
+/* Remove padding for research projects to eliminate double padding */
+.research-grid .project-content {
+    padding: 0;
+}
+
 .project-header {
     display: flex;
     justify-content: space-between;
@@ -509,6 +514,13 @@ h1, h2, h3, h4, h5, h6 {
     border-radius: 4px 4px 0 0;
     background-color: #e9ecef;
     transition: background-color 0.2s ease;
+}
+
+/* Make research project headers fill the entire content area */
+.research-grid .project-header {
+    border-radius: 6px;
+    margin-bottom: 0;
+    padding: 0.8rem 1rem 0rem 1rem; /* Reduce bottom padding */
 }
 
 .project-header.collapsed {
@@ -566,7 +578,7 @@ h1, h2, h3, h4, h5, h6 {
     font-size: 1.8rem;
     transition: transform 0.3s ease;
     color: #2c3e50;
-    margin-left: 1rem;
+    margin-left: 0.5rem;
     font-weight: 900;
     text-shadow: 0 1px 2px rgba(0,0,0,0.1);
     opacity: 0.8;
