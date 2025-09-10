@@ -488,10 +488,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .project-card {
-    background: white;
-    border: 1px solid #e9ecef;
-    border-radius: 6px;
-    overflow: hidden;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid #f0f0f0;
+    border-radius: 0;
+    overflow: visible;
+    padding: 0.6rem 0;
+}
+
+.project-card:last-child {
+    border-bottom: none;
 }
 
 
@@ -518,22 +524,22 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Make research project headers fill the entire content area */
 .research-grid .project-header {
-    border-radius: 6px 6px 0 0;
+    border-radius: 0;
     margin-bottom: 0;
-    padding: 0.8rem 1rem 0rem 1rem; /* Reduce bottom padding */
-    background-color: white;
-    border-bottom: 1px solid #e9ecef;
+    padding: 0.4rem 0 0.2rem 0; /* Much tighter spacing */
+    background-color: transparent;
+    border-bottom: none;
 }
 
 .project-header.collapsed {
     margin-bottom: 0;
-    border-radius: 6px;
+    border-radius: 0;
     border-bottom: none;
 }
 
 
 .project-header:hover {
-    background-color: #dee2e6;
+    background-color: #f8f9fa;
 }
 
 .project-header h3 {
@@ -594,7 +600,7 @@ h1, h2, h3, h4, h5, h6 {
 .project-details {
     overflow: hidden;
     transition: max-height 0.3s ease-out, padding 0.3s ease-out;
-    padding: 1rem 1rem 0.9rem 1rem;
+    padding: 0.4rem 0 0.2rem 0;
     margin: 0;
 }
 
@@ -664,11 +670,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .publication-item {
-    background: white;
-    padding: 0.7rem 0.8rem;
+    background: transparent;
+    padding: 0.6rem 0;
     border: none;
-    border-radius: 6px;
-    margin-bottom: 0.4rem;
+    border-bottom: 1px solid #f0f0f0;
+    border-radius: 0;
+    margin-bottom: 0;
+}
+
+.publication-item:last-child {
+    border-bottom: none;
 }
 
 .publication-item h3 {
