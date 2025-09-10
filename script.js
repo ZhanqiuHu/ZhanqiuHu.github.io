@@ -219,11 +219,22 @@ document.addEventListener('DOMContentLoaded', function() {
         updateActiveNavLink();
     }, 500);
     
-    // Initialize all project details as collapsed
+    // Initialize all project details as expanded
     const projectDetails = document.querySelectorAll('.project-details');
     projectDetails.forEach(detail => {
-        detail.classList.add('collapsed');
-        detail.style.maxHeight = '0';
+        detail.classList.remove('collapsed');
+        detail.style.maxHeight = detail.scrollHeight + 'px';
+        // Also ensure the header is in expanded state
+        const projectHeader = detail.previousElementSibling;
+        if (projectHeader && projectHeader.classList.contains('project-header')) {
+            projectHeader.classList.remove('collapsed');
+        }
+    });
+    
+    // Rotate all dropdown icons to show expanded state
+    const dropdownIcons = document.querySelectorAll('.dropdown-icon');
+    dropdownIcons.forEach(icon => {
+        icon.classList.add('rotated');
     });
 });
 
@@ -248,16 +259,19 @@ const optimizedScrollHandler = debounce(function() {
 // Toggle project dropdown
 function toggleProject(projectId) {
     const projectDetails = document.getElementById(projectId);
-    const dropdownIcon = projectDetails.previousElementSibling.querySelector('.dropdown-icon');
+    const projectHeader = projectDetails.previousElementSibling;
+    const dropdownIcon = projectHeader.querySelector('.dropdown-icon');
     
     if (projectDetails.classList.contains('collapsed')) {
         // Expand
         projectDetails.classList.remove('collapsed');
+        projectHeader.classList.remove('collapsed');
         projectDetails.style.maxHeight = projectDetails.scrollHeight + 'px';
         dropdownIcon.classList.add('rotated');
     } else {
         // Collapse
         projectDetails.classList.add('collapsed');
+        projectHeader.classList.add('collapsed');
         projectDetails.style.maxHeight = '0';
         dropdownIcon.classList.remove('rotated');
     }
