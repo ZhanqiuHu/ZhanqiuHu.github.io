@@ -587,6 +587,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .project-links {
     display: flex;
+    flex-wrap: wrap;
     gap: 1rem;
 }
 
@@ -647,6 +648,26 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
     font-size: 0.85rem;
     margin-left: 0.5rem;
+}
+
+.publication-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.publication-header h3 {
+    margin: 0;
+    flex: 1;
+}
+
+.venue-right {
+    color: #6c757d;
+    font-weight: 400;
+    font-size: 0.85rem;
+    white-space: nowrap;
+    flex-shrink: 0;
 }
 
 .publication-item .description {

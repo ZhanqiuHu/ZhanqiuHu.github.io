@@ -266,8 +266,22 @@ function toggleProject(projectId) {
         // Expand
         projectDetails.classList.remove('collapsed');
         projectHeader.classList.remove('collapsed');
-        projectDetails.style.maxHeight = projectDetails.scrollHeight + 'px';
         dropdownIcon.classList.add('rotated');
+        
+        // Force a reflow and measure the natural height
+        projectDetails.style.maxHeight = 'none';
+        projectDetails.offsetHeight; // Force reflow
+        const naturalHeight = projectDetails.scrollHeight;
+        projectDetails.style.maxHeight = '0';
+        
+        // Start the animation
+        setTimeout(() => {
+            projectDetails.style.maxHeight = naturalHeight + 'px';
+            // Remove the fixed height after animation completes to allow natural flow
+            setTimeout(() => {
+                projectDetails.style.maxHeight = 'none';
+            }, 300);
+        }, 10);
     } else {
         // Collapse
         projectDetails.classList.add('collapsed');
