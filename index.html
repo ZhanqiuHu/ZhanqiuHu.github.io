@@ -59,12 +59,18 @@
         </div>
     </nav>
 
-    <!-- Hero/About Section -->
-    <section id="home" class="hero">
-        <div class="hero-container">
-            <div class="hero-image">
+    <!-- Main Layout Container -->
+    <div class="main-layout">
+        <!-- Sticky Sidebar -->
+        <aside class="sidebar">
+            <div class="profile-section">
                 <div class="profile-photo">
                     <img src="images/zhanqiuhu.png" alt="Zhanqiu (Summer) Hu">
+                </div>
+                <h1 class="profile-name">Zhanqiu (Summer) Hu</h1>
+                <div class="profile-subtitle">
+                    <p>MS Student @ Cornell</p>
+                    <p>Passionate Engineer and Researcher</p>
                 </div>
                 <div class="contact-info-hero">
                     <div class="contact-item">
@@ -79,43 +85,49 @@
                         <i class="fas fa-map-marker-alt"></i>
                         <span>New York, NY</span>
                     </div>
-                    <div class="contact-item" style="display: flex; gap: 1rem;">
-                        <a href="https://www.linkedin.com/in/zhanqiu-hu-5a602317a/" target="_blank" style="color: #666; text-decoration: none;">
-                            <i class="fab fa-linkedin" style="font-size: 1.5rem;"></i>
-                        </a>
-                        <a href="https://github.com/ZhanqiuHu" target="_blank" style="color: #666; text-decoration: none;">
-                            <i class="fab fa-github" style="font-size: 1.5rem;"></i>
-                        </a>
-                        <a href="https://scholar.google.com/citations?user=UinYsSMAAAAJ&hl=en" target="_blank" style="color: #666; text-decoration: none;">
-                            <i class="fas fa-graduation-cap" style="font-size: 1.5rem;"></i>
-                        </a>
+                    <div class="contact-item">
+                        <i class="fab fa-linkedin"></i>
+                        <a href="https://www.linkedin.com/in/zhanqiu-hu-5a602317a/" target="_blank" style="color: #666; text-decoration: none;">LinkedIn</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fab fa-github"></i>
+                        <a href="https://github.com/ZhanqiuHu" target="_blank" style="color: #666; text-decoration: none;">GitHub</a>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-graduation-cap"></i>
+                        <a href="https://scholar.google.com/citations?user=UinYsSMAAAAJ&hl=en" target="_blank" style="color: #666; text-decoration: none;">Google Scholar</a>
                     </div>
                 </div>
             </div>
-            <div class="hero-content">
-                <h1 class="hero-title" id="main-title">
-                    Hi, I'm <span class="highlight">Zhanqiu (Summer) Hu</span>
-                </h1>
-                
-                <div class="about-content">
-                    <p>
-                        I am a graduate student at Cornell Tech and a research assistant at the <a href="https://www.csl.cornell.edu/" target="_blank" style="color: #0066cc; text-decoration: underline;">Cornell Computer Systems Laboratory</a>, where I design efficient algorithms for large language models and build scalable ML systems. 
-                        I received my B.S. in Computer Science (CS) and Electrical and Computer Engineering (ECE) from Cornell University with summa cum laude.
-                    </p>
-                    <p style="background-color: #f0f8ff; padding: 0.5rem; border-left: 4px solid #2c3e50; font-weight: 500;">
-                        <span class="highlight">I'm graduating in December 2025 and am actively seeking Software Engineer, Machine Learning Engineer, and Research Engineer opportunities.</span>
-                    </p>
-                    <p>
-                        My recent work explores test-time optimization for diffusion language models, focusing on caching strategies to accelerate inference. In the past, I have worked on recommendation systems (retrieval and ranking) and DNN model quantization.
-                    </p>
-                    <p>
-                        I am broadly interested in ML systems optimization, distributed computing, and efficient inference for large-scale AI, with an emphasis on connecting research to practical and scalable solutions.
-                    </p>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Hero/About Section -->
+            <section id="home" class="hero">
+                <div class="hero-content-wrapper">
+                    <h2 class="hero-title" id="main-title">
+                        About Me
+                    </h2>
+                    
+                    <div class="about-content">
+                        <p>
+                            I am a graduate student at Cornell Tech and a research assistant at the <a href="https://www.csl.cornell.edu/" target="_blank" style="color: #0066cc; text-decoration: underline;">Cornell Computer Systems Laboratory</a>, where I design efficient algorithms for large language models and build scalable ML systems. 
+                            I received my B.S. in Computer Science (CS) and Electrical and Computer Engineering (ECE) from Cornell University with summa cum laude.
+                        </p>
+                        <p style="background-color: #f0f8ff; padding: 0.5rem; border-left: 4px solid #2c3e50; font-weight: 500;">
+                            <span class="highlight">I'm graduating in December 2025 and am actively seeking Software Engineer, Machine Learning Engineer, and Research Engineer opportunities.</span>
+                        </p>
+                        <p>
+                            My recent work explores test-time optimization for diffusion language models, focusing on caching strategies to accelerate inference. In the past, I have worked on recommendation systems (retrieval and ranking) and DNN model quantization.
+                        </p>
+                        <p>
+                            I am broadly interested in ML systems optimization, distributed computing, and efficient inference for large-scale AI, with an emphasis on connecting research to practical and scalable solutions.
+                        </p>
+                    </div>
+                    
                 </div>
-                
-            </div>
-        </div>
-    </section>
+            </section>
 
 
     <!-- Skills Section -->
@@ -306,7 +318,7 @@
                 <div class="project-card">
                     <div class="project-content">
                         <h3>Teaching Assistant</h3>
-                        <p class="ta-intro">Served as Teaching Assistant for:</p>
+                        <p class="ta-intro">Served as Teaching Assistant for the following courses at Cornell:</p>
                         <ul>
                             <li>CS 1110: Introduction to Computing: A Design and Development Perspective</li>
                             <li>CS 5780: Introduction to Machine Learning</li>
@@ -421,6 +433,8 @@
         </div>
     </section>
 
+        </main>
+    </div>
 
     <!-- Footer -->
     <footer class="footer">
