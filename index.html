@@ -210,12 +210,11 @@
                                         <i class="fas fa-file-alt"></i>
                                     </a>
                                 </h3>
-                                <p class="project-preview">Novel caching strategies and guided diffusion for 34× inference speedup</p>
+                                <p class="project-preview">Novel caching strategies and guided diffusion for 34× inference speedup<br><span style="font-size: 0.8rem; color: #666;"><em>Thanks to my collaborators <a href="https://mengjian0502.github.io/" target="_blank" style="color: #0066cc; text-decoration: underline;">Jian Meng</a> and <a href="https://akhauriyash.github.io/" target="_blank" style="color: #0066cc; text-decoration: underline;">Yash Akhauri</a> for their valuable contributions to this work.</em></span></p>
                             </div>
                             <span class="dropdown-icon">▾</span>
                         </div>
                         <div class="project-details" id="project1">
-                            <p><em>Thanks to my collaborators <a href="https://mengjian0502.github.io/" target="_blank" style="color: #0066cc; text-decoration: underline;">Jian Meng</a> and <a href="https://akhauriyash.github.io/" target="_blank" style="color: #0066cc; text-decoration: underline;">Yash Akhauri</a> for their valuable contributions to this work.</em></p>
                             <p>Diffusion language models enable parallel token generation and bidirectional context but suffer from slow inference due to iterative denoising, making them impractical for long context reasoning compared to autoregressive models.</p>
                             <p>This work introduces <strong>FreeCache</strong> and <strong>Guided Diffusion</strong>, two training-free techniques for accelerating diffusion inference. FreeCache reuses stable key-value projections across steps, and Guided Diffusion employs a lightweight autoregressive model to guide token unmasking, reducing the number of iterations while preserving coherence.</p>
                             <p>Together these methods achieve up to 34× end-to-end speedup with negligible accuracy loss, making diffusion models as efficient as autoregressive baselines and enabling their deployment in real-world applications.</p>
@@ -244,12 +243,11 @@
                         <div class="project-header" onclick="toggleProject('project2')">
                             <div>
                                 <h3>ReCoOpt: Co-Design Framework for Efficient Recommendation System</h3>
-                                <p class="project-preview">Hardware-software co-design for end-to-end recommendation optimization</p>
+                                <p class="project-preview">Hardware-software co-design for end-to-end recommendation optimization<br><span style="font-size: 0.8rem; color: #666;"><em>Thanks to my collaborator <a href="https://home.cs.colorado.edu/~myzhao/" target="_blank" style="color: #0066cc; text-decoration: underline;">Mark Zhao</a> for his valuable contributions to this work.</em></span></p>
                             </div>
                             <span class="dropdown-icon">▾</span>
                         </div>
                         <div class="project-details" id="project2">
-                            <p><em>Thanks to my collaborator <a href="https://home.cs.colorado.edu/~myzhao/" target="_blank" style="color: #0066cc; text-decoration: underline;">Mark Zhao</a> for his valuable contributions to this work.</em></p>
                             <p>Modern recommendation systems execute multi-stage pipelines at massive scale, but most optimization efforts target only the deep neural network ranking stage, leaving major bottlenecks in feature fetching, approximate nearest neighbor search, and orchestration.</p>
                             <p>To address this gap, <strong>ReCoOpt</strong> is introduced as a modular framework that enables systematic hardware and software co-design of end-to-end recommendation inference. The framework profiles and tunes retrieval, feature fetching, and ranking across heterogeneous platforms to explore balanced pipeline configurations.</p>
                             <p>Using MovieLens datasets, <strong>ReCoOpt</strong> demonstrates that holistic co-design can improve hit rate by 0.05 under a fixed latency budget, double throughput, or reduce latency by 40%, showing that balanced hardware and software optimization is essential for scalable recommendation engines.</p>
@@ -271,12 +269,11 @@
                                         <i class="fas fa-file-alt"></i>
                                     </a>
                                 </h3>
-                                <p class="project-preview">Overwrite quantization technique for handling activation outliers in CNNs</p>
+                                <p class="project-preview">Overwrite quantization technique for handling activation outliers in CNNs<br><span style="font-size: 0.8rem; color: #666;"><em>Thanks to my mentor <a href="https://www.jordandotzel.com/" target="_blank" style="color: #0066cc; text-decoration: underline;">Jordan Dotzel</a> for his guidance and support on this work.</em></span></p>
                             </div>
                             <span class="dropdown-icon">▾</span>
                         </div>
                         <div class="project-details" id="project3">
-                            <p><em>Thanks to my mentor <a href="https://www.jordandotzel.com/" target="_blank" style="color: #0066cc; text-decoration: underline;">Jordan Dotzel</a> for his guidance and support on this work.</em></p>
                             <p>Low precision quantization reduces the cost of deep neural networks but suffers from rare outliers in activations that degrade accuracy. Existing fixes require retraining or expensive outlier hardware.</p>
                             <p><strong>OverQ</strong> introduces overwrite quantization, which lets outliers reuse nearby zeros to gain extra range or precision. A simple cascading mechanism expands coverage, and the design fits efficiently into systolic array accelerators.</p>
                             <p>With modest overhead, <strong>OverQ</strong> handles over 90% of outliers, improving ImageNet accuracy by up to 5% at 4 bits while adding only about 10% area per processing element.</p>
