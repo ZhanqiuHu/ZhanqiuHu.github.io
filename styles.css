@@ -654,6 +654,11 @@ h1, h2, h3, h4, h5, h6 {
     gap: 1rem;
 }
 
+/* Project Figures */
+.project-figure img, .project-figures img {
+    background-color: white;
+}
+
 .project-link {
     color: #2c3e50;
     text-decoration: none;

@@ -218,12 +218,12 @@
                             <p>Diffusion language models enable parallel token generation and bidirectional context but suffer from slow inference due to iterative denoising, making them impractical for long context reasoning compared to autoregressive models.</p>
                             <p>This work introduces <strong>FreeCache</strong> and <strong>Guided Diffusion</strong>, two training-free techniques for accelerating diffusion inference. FreeCache reuses stable key-value projections across steps, and Guided Diffusion employs a lightweight autoregressive model to guide token unmasking, reducing the number of iterations while preserving coherence.</p>
                             <p>Together these methods achieve up to 34× end-to-end speedup with negligible accuracy loss, making diffusion models as efficient as autoregressive baselines and enabling their deployment in real-world applications.</p>
-                            <div class="project-figures" style="display: flex; gap: 1rem; margin: 1rem 0; justify-content: center; flex-wrap: wrap; align-items: flex-start;">
-                                <div class="figure-item" style="flex: 0 0 40%;">
-                                    <img src="images/flashdlm_freecache.png" alt="FreeCache Architecture" style="width: 100%; height: 280px; object-fit: contain; border: 1px solid #e9ecef; border-radius: 6px;">
+                            <div class="project-figures" style="display: flex; gap: 1rem; margin: 1rem 0; justify-content: center; flex-wrap: nowrap; align-items: stretch;">
+                                <div class="figure-item" style="flex: 0 0 45%;">
+                                    <img src="images/flashdlm_freecache.png" alt="FreeCache Architecture" style="width: 100%; height: 320px; object-fit: contain; border: 1px solid #e9ecef; border-radius: 6px;">
                                 </div>
-                                <div class="figure-item" style="flex: 0 0 50%;">
-                                    <img src="images/flashdlm_guided_diffusion.png" alt="Guided Diffusion Architecture" style="width: 100%; height: 280px; object-fit: contain; border: 1px solid #e9ecef; border-radius: 6px;">
+                                <div class="figure-item" style="flex: 0 0 55%;">
+                                    <img src="images/flashdlm_guided_diffusion.png" alt="Guided Diffusion Architecture" style="width: 100%; height: 320px; object-fit: contain; border: 1px solid #e9ecef; border-radius: 6px;">
                                 </div>
                             </div>
                             <div class="project-links">
@@ -252,7 +252,7 @@
                             <p>To address this gap, <strong>ReCoOpt</strong> is introduced as a modular framework that enables systematic hardware and software co-design of end-to-end recommendation inference. The framework profiles and tunes retrieval, feature fetching, and ranking across heterogeneous platforms to explore balanced pipeline configurations.</p>
                             <p>Using MovieLens datasets, <strong>ReCoOpt</strong> demonstrates that holistic co-design can improve hit rate by 0.05 under a fixed latency budget, double throughput, or reduce latency by 40%, showing that balanced hardware and software optimization is essential for scalable recommendation engines.</p>
                             <div class="project-figure">
-                                <img src="images/RecSysSystemDiagram.png" alt="Recommendation System Architecture Diagram" style="max-width: 60%; height: auto; margin: 1rem auto; display: block; border: 1px solid #e9ecef; border-radius: 6px;">
+                                <img src="images/RecSysSystemDiagram.png" alt="Recommendation System Architecture Diagram" style="max-width: 75%; height: auto; margin: 1rem auto; display: block; border: 1px solid #e9ecef; border-radius: 6px;">
                             </div>
                             <div class="project-links">
                             </div>
@@ -278,7 +278,7 @@
                             <p><strong>OverQ</strong> introduces overwrite quantization, which lets outliers reuse nearby zeros to gain extra range or precision. A simple cascading mechanism expands coverage, and the design fits efficiently into systolic array accelerators.</p>
                             <p>With modest overhead, <strong>OverQ</strong> handles over 90% of outliers, improving ImageNet accuracy by up to 5% at 4 bits while adding only about 10% area per processing element.</p>
                             <div class="project-figure">
-                                <img src="images/overq.png" alt="OverQ Architecture" style="max-width: 60%; height: auto; margin: 1rem auto; display: block; border: 1px solid #e9ecef; border-radius: 6px;">
+                                <img src="images/overq.png" alt="OverQ Architecture" style="max-width: 75%; height: auto; margin: 1rem auto; display: block; border: 1px solid #e9ecef; border-radius: 6px;">
                             </div>
                             <div class="project-links">
                                 <a href="https://arxiv.org/abs/1910.06909" class="project-link">
