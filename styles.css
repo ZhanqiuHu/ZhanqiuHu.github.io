@@ -160,7 +160,7 @@ h1, h2, h3, h4, h5, h6 {
     display: grid;
     grid-template-columns: 300px 1fr;
     gap: 0;
-    max-width: 1200px;
+    max-width: 1250px;
     margin: 0 auto;
     padding-top: 80px;
 }
@@ -215,7 +215,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .hero-content-wrapper {
-    max-width: 800px;
+    max-width: 1000px;
 }
 
 .hero-title {
@@ -301,7 +301,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .about-content {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -679,7 +679,7 @@ h1, h2, h3, h4, h5, h6 {
 /* Publications Section */
 
 .publications-list {
-    max-width: 900px;
+    max-width: 1200px;
     margin: -0.2rem auto 0 auto;
 }
 
