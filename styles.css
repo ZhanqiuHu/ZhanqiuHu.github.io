@@ -619,6 +619,12 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 !important;
 }
 
+/* Default expanded state for first project only */
+.project-details:first-child {
+    max-height: none !important;
+    overflow: visible !important;
+}
+
 .project-content h3 {
     color: #2c3e50;
     margin-bottom: 0.6rem;

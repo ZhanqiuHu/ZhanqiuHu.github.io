@@ -219,19 +219,32 @@ document.addEventListener('DOMContentLoaded', function() {
         updateActiveNavLink();
     }, 500);
     
-    // Initialize all projects as expanded
+    // Initialize projects - expand first one only
     const projectDetails = document.querySelectorAll('.project-details');
-    projectDetails.forEach(detail => {
-        // All projects start expanded
-        detail.classList.remove('collapsed');
-        detail.style.maxHeight = 'none';
+    projectDetails.forEach((detail, index) => {
+        if (index === 0) {
+            // First project (FlashDLM) starts expanded
+            detail.classList.remove('collapsed');
+            detail.style.maxHeight = 'none';
+            detail.style.overflow = 'visible';
+            detail.style.display = 'block';
+        } else {
+            // Other projects start collapsed
+            detail.classList.add('collapsed');
+            detail.style.maxHeight = '0';
+        }
     });
     
-    // Set all dropdown icons to expanded state
+    // Set dropdown icons based on project position
     const dropdownIcons = document.querySelectorAll('.dropdown-icon');
-    dropdownIcons.forEach(icon => {
-        // All projects start with expanded icon
-        icon.classList.add('rotated');
+    dropdownIcons.forEach((icon, index) => {
+        if (index === 0) {
+            // First project starts with expanded icon
+            icon.classList.add('rotated');
+        } else {
+            // Other projects start with collapsed icon
+            icon.classList.remove('rotated');
+        }
     });
 });
 
