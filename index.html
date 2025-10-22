@@ -229,14 +229,35 @@
                             <span class="dropdown-icon">▾</span>
                         </div>
                         <div class="project-details" id="project1">
+                            <!-- Standalone paragraph -->
                             <p>Diffusion language models enable parallel token generation and bidirectional context but suffer from slow inference due to iterative denoising, making them impractical for long context reasoning compared to autoregressive models.</p>
-                            <p>This work introduces <strong>FreeCache</strong> and <strong>Guided Diffusion</strong>, two training-free techniques for accelerating diffusion inference. FreeCache reuses stable key-value projections across steps, and Guided Diffusion employs a lightweight autoregressive model to guide token unmasking, reducing the number of iterations while preserving coherence.</p>
-                            <p>Together these methods achieve up to 34× end-to-end speedup with negligible accuracy loss, making diffusion models as efficient as autoregressive baselines and enabling their deployment in real-world applications.</p>
+                            
+                            <!-- Side-by-side layout: Video and Description -->
+                            <div style="display: flex; gap: 1.5rem; align-items: flex-start; margin: 1rem 0;">
+                                <!-- Video Section -->
+                                <div style="flex: 0 0 50%;">
+                                    <div class="video-container">
+                                        <video width="480" height="270" controls autoplay muted preload="metadata" style="width: 100%; height: auto; border-radius: 6px;">
+                                            <source src="images/flashdlm-demo_compressed.mp4" type="video/mp4">
+                                            <source src="images/flashdlm-demo.mov" type="video/quicktime">
+                                            <p>Your browser doesn't support HTML5 video. <a href="images/flashdlm-demo_compressed.mp4">Download the video</a> instead.</p>
+                                        </video>
+                                    </div>
+                                </div>
+                                
+                                <!-- Text Description -->
+                                <div style="flex: 1;">
+                                    <p>This work introduces <strong>FreeCache</strong> and <strong>Guided Diffusion</strong>, two training-free techniques for accelerating diffusion inference. FreeCache reuses stable key-value projections across steps, and Guided Diffusion employs a lightweight autoregressive model to guide token unmasking, reducing the number of iterations while preserving coherence.</p>
+                                    <p>Together these methods achieve up to 34× end-to-end speedup with negligible accuracy loss, making diffusion models as efficient as autoregressive baselines and enabling their deployment in real-world applications.</p>
+                                </div>
+                            </div>
                             <div class="project-figures" style="display: flex; gap: 1rem; margin: 1rem 0; justify-content: center; flex-wrap: nowrap; align-items: stretch;">
                                 <div class="figure-item" style="flex: 0 0 45%;">
+                                    <p style="text-align: center; font-size: 0.9rem; color: #666; margin-bottom: 0.5rem; font-weight: 500;">FreeCache</p>
                                     <img src="images/flashdlm_freecache.png" alt="FreeCache Architecture" style="width: 100%; height: 320px; object-fit: contain; border: 1px solid #e9ecef; border-radius: 6px;">
                                 </div>
                                 <div class="figure-item" style="flex: 0 0 55%;">
+                                    <p style="text-align: center; font-size: 0.9rem; color: #666; margin-bottom: 0.5rem; font-weight: 500;">GuidedDiffusion</p>
                                     <img src="images/flashdlm_guided_diffusion.png" alt="Guided Diffusion Architecture" style="width: 100%; height: 320px; object-fit: contain; border: 1px solid #e9ecef; border-radius: 6px;">
                                 </div>
                             </div>
@@ -395,6 +416,7 @@
                             <img src="images/sokoban-demo.gif" alt="Sokoban Game Demo" style="width: 100%; height: auto; border-radius: 6px; border: 1px solid #e9ecef;">
                         </div>
                     </div>
+                    
                 </div>
                 
                 <div class="project-card">
@@ -424,7 +446,7 @@
             <div class="publications-list">
                 <div class="publication-item">
                     <div class="publication-header">
-                        <h3>Accelerating Diffusion Language Model Inference via Efficient KV Caching and Guided Diffusion</h3>
+                        <h3>FlashDLM: Accelerating Diffusion Language Model Inference via Efficient KV Caching and Guided Diffusion</h3>
                         <span class="venue-right">preprint</span>
                     </div>
                     <p class="authors"><strong>Zhanqiu Hu</strong>, Jian Meng, Yash Akhauri, Mohamed S. Abdelfattah, Jae-sun Seo, Zhiru Zhang, Udit Gupta</p>

@@ -219,32 +219,19 @@ document.addEventListener('DOMContentLoaded', function() {
         updateActiveNavLink();
     }, 500);
     
-    // Initialize research projects as collapsed, others as expanded
+    // Initialize all projects as expanded
     const projectDetails = document.querySelectorAll('.project-details');
     projectDetails.forEach(detail => {
-        const isResearchProject = detail.closest('.research-grid');
-        if (isResearchProject) {
-            // Research projects start collapsed
-            detail.classList.add('collapsed');
-            detail.style.maxHeight = '0';
-        } else {
-            // Other projects start expanded
-            detail.classList.remove('collapsed');
-            detail.style.maxHeight = detail.scrollHeight + 'px';
-        }
+        // All projects start expanded
+        detail.classList.remove('collapsed');
+        detail.style.maxHeight = 'none';
     });
     
-    // Set dropdown icons based on project type
+    // Set all dropdown icons to expanded state
     const dropdownIcons = document.querySelectorAll('.dropdown-icon');
     dropdownIcons.forEach(icon => {
-        const isResearchProject = icon.closest('.research-grid');
-        if (isResearchProject) {
-            // Research projects start with collapsed icon
-            icon.classList.remove('rotated');
-        } else {
-            // Other projects start with expanded icon
-            icon.classList.add('rotated');
-        }
+        // All projects start with expanded icon
+        icon.classList.add('rotated');
     });
 });
 
