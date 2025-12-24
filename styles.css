@@ -619,10 +619,22 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 !important;
 }
 
-/* Default expanded state for first project only */
-.project-details:first-child {
+/* Default expanded state for first project only - but allow collapsing */
+.project-details:first-child:not(.collapsed) {
     max-height: none !important;
     overflow: visible !important;
+    display: block !important;
+}
+
+/* Allow collapsed state to work */
+.project-details:first-child.collapsed {
+    max-height: 0 !important;
+    overflow: hidden !important;
+}
+
+/* Additional force for project expansion */
+.project-details {
+    transition: max-height 0.3s ease-out;
 }
 
 .project-content h3 {

@@ -295,6 +295,7 @@ function toggleProject(projectId) {
         // Collapse
         projectDetails.classList.add('collapsed');
         projectDetails.style.maxHeight = '0';
+        projectDetails.style.overflow = 'hidden';
         dropdownIcon.classList.remove('rotated');
     }
 }
